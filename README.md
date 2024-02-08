@@ -1,9 +1,16 @@
+# Forecasting exchange rates with RNN's
+
+## Motivation
+
 Forecasting exchange rates is an interesting problem for businesses and banks. There are various ways in which one could model the problem, which include analysing all factors that might impact the exchange rate (unemployment, gross domestic product), or looking at historical data to find hidden patterns within the data - for some more discussion, this [post](https://fxopen.com/blog/en/7-common-ways-to-forecast-currency-exchange-rates/#:~:text=Comparing%20economic%20conditions%20in%20two,direction%20of%20a%20pair's%20rate.) offers some interesting ideas.
 
 <p>
-In this project, I aim to explore the predictive power of deep learning and machine learning. So, I chose to look at historical data from the [ECB](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-gbp.en.html) on the exchange rate between the Euro (EUR) and the Great Britain Pound (GBP), and also at Gross Domestic Product data from the [Office for National Statistics](https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/contributionstomonthlygdp). One very important assumption when predicting time series based on past behaviour, is that _relationships established in the past do not change_. This is the reason why such models hold only in the absence of external events that can affect the underlying assumptions (economic crises, changes in trade relationships invalidate the model). Hence, despite much historical data, predictions can be made only by considering relatively _stable_ periods, not marked by major changes. 
+
+In this project, I aim to explore the predictive power of deep learning and machine learning. So, I chose to look at historical data from the [European Central Bank](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-gbp.en.html) on the exchange rate between the Euro (EUR) and the Great Britain Pound (GBP), and also at Gross Domestic Product data from the [Office for National Statistics](https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/contributionstomonthlygdp). One very important assumption when predicting time series based on past behaviour, is that relationships established in the past do not change. This is the reason why such models hold only in the absence of external events that can affect the underlying assumptions (economic crises, changes in trade relationships invalidate the model). Hence, despite much historical data, predictions can be made only by considering relatively _stable_ periods, not marked by major changes. 
 
 </p>
+
+## Assumptions
 
 <p>
 
@@ -15,6 +22,8 @@ One very important aspect is to identify the purpose of the model. In this proje
 
 Equally important, is that the RNN is a model of low _interpretability_, as many calculations are done in each layer, and layers are usually connected by activation functions. So it is difficult to intepret the parameters of the model, which makes the RNN more like a black box. ARIMA, on the other hand, has a clear meaning for its model parameters.
 </p>
+
+## Project Files
 
 <p>
 The associated Jupyter Notebook shows my code and my reasoning step by step, and it mainly looks to understand patterns in the data itself, to make predictions. I took four steps in this analysis:
